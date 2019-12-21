@@ -13,7 +13,7 @@ tl
   opacity:0,
   y:40,
   ease: Power3.easeInOut
-}, 0.4, '-=0.7')
+}, 0.4, '-=0.7');
 
 
 
@@ -31,13 +31,13 @@ $('.show-menu').click(function (e) {
   }
 
   toggleTween(tl);
-})
+});
 
 $(document).click(function () {
   if ($(".menu").hasClass("active")) {
     $(".show-menu").click();
   }
-})
+});
 $(".show-menu").click(function (e) {
   "use strict";
   e.stopPropagation();
@@ -54,6 +54,7 @@ $(document).ready(function () {
     loop: false,
     pagination: {
       el: '.swiper-pagination',
+      clickable:true,
     },
     autoplay: {
       delay: 5000,
@@ -62,7 +63,7 @@ $(document).ready(function () {
       enabled: true,
       onlyInViewport: true,
     },   
-  })
+  });
 });
 
 //Model Filter Active Class
@@ -70,7 +71,28 @@ $(document).ready(function () {
   'use strict';
   $('.model-filter ul li ').click(function () {
     $(this).addClass('active').siblings('li').removeClass('active');
-  })
+  });
+
+
+
+//Masonry Gallery
+  // init Isotope
+  var $grid = $('.masonry-container').isotope({
+    // options
+    itemSelector: '.model',
+    percentPosition: true,
+    masonry: {
+      // use outer width of grid-sizer for columnWidth
+      columnWidth: '.grid-sizer',
+      gutter: '.gutter-sizer'
+    }
+  });
+  // filter items on button click
+  $('.model-filter').on( 'click', 'li', function() {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
+
 });
 
 
@@ -78,12 +100,8 @@ $(document).ready(function () {
 $(document).ready(function () {
   "use strict";
   $(".ratio-content img").each(function () {
-    "use strict";
     var ratio = ($(this).height()  / $(this).width()) * 100 ;
     $(this).parent('.ratio-content ').siblings(".ratio").css('padding-top', ratio +'%');
   });
 });
 
-
-//Mix It Up 
-var mixer = mixitup('.gallery-column');

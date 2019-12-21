@@ -446,22 +446,36 @@ a:hover, a:focus {
   transition: 0.3s;
 }
 
-.gallery .gallery-column .model {
+.gallery .masonry-container .grid-sizer, .gallery .masonry-container .model {
+  width: 31%;
+}
+
+@media (max-width: 768px) {
+  .gallery .masonry-container .grid-sizer, .gallery .masonry-container .model {
+    width: 100%;
+  }
+}
+
+.gallery .masonry-container .gutter-sizer {
+  width: 2%;
+}
+
+.gallery .masonry-container .model {
   margin-bottom: 25px;
 }
 
-.gallery .gallery-column .model:hover .overlay {
+.gallery .masonry-container .model:hover .overlay {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: right;
           transform-origin: right;
 }
 
-.gallery .gallery-column .model:hover .model-info {
+.gallery .masonry-container .model:hover .model-info {
   opacity: 1;
 }
 
-.gallery .gallery-column .model .overlay {
+.gallery .masonry-container .model .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -477,7 +491,7 @@ a:hover, a:focus {
           transform-origin: left;
 }
 
-.gallery .gallery-column .model .model-info {
+.gallery .masonry-container .model .model-info {
   position: absolute;
   bottom: 5%;
   width: 100%;
@@ -489,14 +503,14 @@ a:hover, a:focus {
   opacity: 0;
 }
 
-.gallery .gallery-column .model .model-info h6 {
+.gallery .masonry-container .model .model-info h6 {
   color: #fff;
   font-size: 4vmin;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.gallery .gallery-column .model .model-info p {
+.gallery .masonry-container .model .model-info p {
   color: #ffffff8c;
   font-size: 3.5vmin;
   -webkit-transition: 0.3s;
