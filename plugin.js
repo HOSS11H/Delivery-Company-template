@@ -72,10 +72,20 @@ $(document).ready(function () {
   $('.model-filter ul li ').click(function () {
     $(this).addClass('active').siblings('li').removeClass('active');
   });
+});
 
 
+//Auto RATIO ASPECT For Images
+$(document).ready(function () {
+  "use strict";
+  $(".ratio-content img").each(function () {
+    var ratio = ($(this).height()  / $(this).width()) * 100 ;
+    $(this).parent('.ratio-content ').siblings(".ratio").css('padding-top', ratio +'%');
+  });
+});
 
 //Masonry Gallery
+$(window).ready(function () {    /*Intialize After All Elements Are Loaded*/
   // init Isotope
   var $grid = $('.masonry-container').isotope({
     // options
@@ -94,14 +104,3 @@ $(document).ready(function () {
   });
 
 });
-
-
-//Auto RATIO ASPECT For Images
-$(document).ready(function () {
-  "use strict";
-  $(".ratio-content img").each(function () {
-    var ratio = ($(this).height()  / $(this).width()) * 100 ;
-    $(this).parent('.ratio-content ').siblings(".ratio").css('padding-top', ratio +'%');
-  });
-});
-
