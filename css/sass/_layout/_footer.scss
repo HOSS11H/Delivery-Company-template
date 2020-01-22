@@ -1,0 +1,129 @@
+footer{
+  padding:100px 0 80px;
+  background:#2c2b2b;
+  .footer-heading{
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  .foot-text{
+    font-size:14px;
+    color: #999;
+    text-transform: capitalize;
+  }
+  .footer-contact,.footer-links,.gallery,.newsletter{
+    margin-bottom: 40px;
+    @media #{$maxTablet}{
+      text-align:center
+    }
+  }
+  .footer-contact{
+    .communication{
+      padding-bottom: 8px ;
+      &:hover{
+        i{
+            color:$mainColor
+        }
+      }
+      i{
+        color:#999;
+        vertical-align: middle;
+        margin-top:3px;
+        margin-right: 10px;
+        transition:0.5s
+      }
+    }
+  }
+  .footer-links{
+    li{
+      margin-bottom: 8px;
+      &:hover{
+        i{
+          color:$mainColor
+        }
+        a{
+          color: #fff;
+          padding-left: 6px;
+        }
+
+      }
+    }
+    i{
+      color: #999;
+      margin-right: 5px;
+      vertical-align: middle;
+      transition: 0.5s;
+    }
+    a{
+      font-size: 14px;
+      transition:0.5s;
+    }
+  }
+  .gallery{
+    .footer-img{
+      padding-left: 0;
+      margin-bottom: 15px;
+    }
+  }
+  .newsletter{
+    .footer-label{
+      line-height: 1;
+      margin-bottom: 40px;
+    }
+    .subscribe{
+      display: flex;
+      position: relative;
+      margin-bottom: 30px;
+      input{
+        width:80%;
+        background: #fff;
+        padding: 10px ;
+        border: 0;
+        text-transform: capitalize;
+        color: #999;
+        &:focus{
+          border: none;
+          outline: none;
+        }
+      }
+      a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width:20%;
+        background: #fff;
+        color: #999;
+        text-align: center;
+        i{
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 25px;
+          height: 25px;
+          border: 1px solid #999;
+          border-radius: 50%;
+        }
+      }
+    }
+    .footer-social{
+      display: flex;
+      @media #{$maxTablet}{
+        justify-content:center;
+      }
+      ul{
+        li{
+          display:inline-block;
+          margin-left: 10px;
+          a{
+            font-size: 13px;
+            vertical-align: top;
+            color: #999;
+            transition: 0.5s;
+            &:hover{
+              color: $mainColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

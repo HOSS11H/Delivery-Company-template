@@ -1,0 +1,182 @@
+/*global Rules*/
+html{
+  scroll-behavior: smooth;
+}
+@for $i from 1 through 6 {
+  h#{$i}{
+      text-transform: capitalize;
+      margin: 0;
+  }
+}
+p{
+  margin: 0;
+}
+.list-unstyled{
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  &:hover,&:focus{
+      text-decoration: none;
+  }
+}
+.item-clickable{
+  position:relative;
+}
+.clickable{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  width:100%;
+  height:100%;
+  z-index:2;
+}
+.ratio-container{
+  position: relative;
+  .ratio-content{
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      width: 100%;
+      height:100%;
+      img{
+        max-width: 100%;
+      }
+  }
+}
+.black-bold{
+  color:#000;
+  font-weight: bold;
+}
+.section-heading{
+  margin-bottom: 45px;
+  .section-pre-title{
+    letter-spacing: 16px;
+    font-size: 18px;
+    color:$mainColor;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    @media #{$maxSmall}{
+      font-size:16px
+    }
+  }
+  .section-title{
+    font-size: 42px;
+    color: #000;
+    font-weight: bold;
+    @media #{$maxSmall}{
+      font-size:32px
+    }
+  }
+}
+
+.paragraph{
+  color:#999
+}
+/*global Rules*/
+
+/*Slider Reset*/
+/*Style The Slider*/
+.main{
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    color: rgba(255,255,255,0.7);
+    left: 50px;
+  }
+  .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev{
+    color: rgba(255,255,255,0.7);
+    right: 50px;
+  }
+}
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  color: rgba(255,255,255,0.9);
+  left: 50px;
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev{
+  color: rgba(255,255,255,0.9);
+  right: 50px;
+}
+.swiper-scrollbar{
+  background:rgba(0,0,0,0.3);
+}
+.swiper-scrollbar .swiper-scrollbar-drag {
+  background: $mainColor
+}
+/*Slider Reset*/
+
+/*Form Reset*/
+
+.select-box{
+  margin-bottom:25px;
+  label{
+    display: block;
+    color:#000;
+    text-transform: capitalize;
+  }
+  .box{
+    position:relative;
+    .select{
+      width:100%;
+      padding: 20px 15px;
+      background: #dddddd8f;
+      position: relative;
+      border: 0;
+      text-transform: capitalize;
+    }
+    input{
+      height:55px;
+      &:focus{
+        border:1px solid #ddd;
+        outline:none;
+        background: #fff;
+        color: #000;
+      }
+    }
+    textarea{
+      height: auto;
+      margin-bottom:80px;
+      &:focus{
+        border:1px solid #ddd;
+        outline:none;
+        background: #fff;
+        color: #000;
+      }
+    }
+    i{
+      position: absolute;
+      bottom: 15px;
+      right: 20px;
+      cursor:pointer;
+      font-size: 20px;
+      color: #999;
+    }
+    select{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: 0;
+      cursor:pointer;
+      text-transform: capitalize;
+      /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+    @include opacity(0);
+    z-index: 2;
+    &:focus{
+      border:none;
+      outline: none;
+    }
+  }
+  }
+}
+/*Form Reset*/

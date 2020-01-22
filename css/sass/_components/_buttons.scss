@@ -1,0 +1,10 @@
+.button{
+  color: #fff;
+  background-color: #eb2f06;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  &:hover{
+    color:#fff
+  }
+}
