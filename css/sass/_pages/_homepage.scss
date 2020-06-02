@@ -70,14 +70,18 @@
     }
     .feature{
       padding: 20px;
-      margin-bottom: 45px;
       background: #fff;
+      margin-bottom: 45px;
+      @media #{$maxTablet} {
+        max-width: 370px;
+        margin: 0 auto 45px;
+      }
       @media #{$minLarge}{
         position: relative;
         bottom: 135px;
         z-index: 1;
       }
-      transition:0.5s;
+      transition: 0.5s ease-in-out;
       &:hover{
         box-shadow: 3px 8px 18px 6px rgba(0,0,0,0.4);
         .feature-content{
@@ -99,7 +103,7 @@
           font-weight:bold;
           text-transform: uppercase;
           color:#999;
-          transition: 0.5s;
+          transition: 0.5s ease-in-out;
         }
     }
   }
@@ -113,7 +117,7 @@
     padding: 40px 20px;
     border: 1px solid rgba(204, 204, 204, 0.993);
     margin-bottom: 30px;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
     &:hover{
       background-color:$mainColor;
       i,h4,p{
@@ -124,20 +128,20 @@
       font-size: 40px;
       margin-bottom: 40px;
       color: $mainColor;
-      transition: 0.5s;
+      transition: 0.5s ease-in-out;
     }
     h4{
       font-size: 20px;
       margin-bottom: 25px;
       color: #000;
       font-weight: bold;
-      transition: 0.5s;
+      transition: 0.5s ease-in-out;
       @media #{$minLarge} {
         font-size:23px;
       }
     }
     p{
-      transition: 0.5s;
+      transition: 0.5s ease-in-out;
     }
   }
 }
@@ -378,15 +382,15 @@
       a{
         text-transform: capitalize;
         font-weight: bolder;
+        transition: 0.5s ease-in-out;
         &:hover,&:focus{
-          color:#000;
-          text-decoration: underline;
+          color:$mainColor;
         }
       }
     }
     .articles-link{
       color: #999;
-      transition:0.5s;
+      transition: 0.5s ease-in-out;
       text-transform: capitalize;
       display: block;
       margin-top: 30px;
@@ -402,7 +406,7 @@
     margin-bottom:40px;
     .faqs-link{
       color: #999;
-      transition:0.5s;
+      transition: 0.5s ease-in-out;
       text-transform: capitalize;
       display: block;
       margin-top: 30px;
@@ -416,9 +420,14 @@
     .faq{
       position:relative;
       margin-bottom:15px;
-      
+      cursor: pointer;
+      &:hover , &:focus{
+        .head , .show-faq {
+          color:$mainColor;
+        }
+      }
       &.triggred {
-        .head{
+        .head , .show-faq{
           color: $mainColor;
         }
         .answer{
@@ -429,13 +438,10 @@
         text-transform: capitalize;
         font-weight: bolder;
         color: #000;
-        transition: 0.5s;
+        transition: 0.5s ease-in-out;
         display: block;
         width: 96%;
         margin-bottom:10px;
-        &:hover,&:focus{
-          color:$mainColor;
-        }
       }
       .show-faq{
         position: absolute;
@@ -443,11 +449,12 @@
         right:0px;
         font-size: 20px;
         color:#999;
+        transition: 0.5s ease-in-out;
       }
       .answer{
         padding-left: 10px;
         max-height: 0;
-        transition: 0.5s;
+        transition: 0.5s ease-in-out;
         overflow:hidden;
       }
     }

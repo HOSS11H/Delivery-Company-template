@@ -11205,10 +11205,17 @@ header nav .menu-mobile .list-unstyled li a::after {
 
 .features .feature {
   padding: 20px;
-  margin-bottom: 45px;
   background: #fff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  margin-bottom: 45px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 991.98px) {
+  .features .feature {
+    max-width: 370px;
+    margin: 0 auto 45px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -11245,8 +11252,8 @@ header nav .menu-mobile .list-unstyled li a::after {
   font-weight: bold;
   text-transform: uppercase;
   color: #999;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 /*End Section Features*/
@@ -11260,8 +11267,8 @@ header nav .menu-mobile .list-unstyled li a::after {
   padding: 40px 20px;
   border: 1px solid rgba(204, 204, 204, 0.993);
   margin-bottom: 30px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .services .service:hover {
@@ -11276,8 +11283,8 @@ header nav .menu-mobile .list-unstyled li a::after {
   font-size: 40px;
   margin-bottom: 40px;
   color: #eb2f06;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .services .service h4 {
@@ -11285,8 +11292,8 @@ header nav .menu-mobile .list-unstyled li a::after {
   margin-bottom: 25px;
   color: #000;
   font-weight: bold;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 @media screen and (min-width: 992px) {
@@ -11296,8 +11303,8 @@ header nav .menu-mobile .list-unstyled li a::after {
 }
 
 .services .service p {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 /*End Section Services*/
@@ -11610,17 +11617,18 @@ header nav .menu-mobile .list-unstyled li a::after {
 .interactions .articles .article a {
   text-transform: capitalize;
   font-weight: bolder;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .interactions .articles .article a:hover, .interactions .articles .article a:focus {
-  color: #000;
-  text-decoration: underline;
+  color: #eb2f06;
 }
 
 .interactions .articles .articles-link {
   color: #999;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   text-transform: capitalize;
   display: block;
   margin-top: 30px;
@@ -11640,8 +11648,8 @@ header nav .menu-mobile .list-unstyled li a::after {
 
 .interactions .faqs .faqs-link {
   color: #999;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   text-transform: capitalize;
   display: block;
   margin-top: 30px;
@@ -11658,9 +11666,14 @@ header nav .menu-mobile .list-unstyled li a::after {
 .interactions .faqs .faq {
   position: relative;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
-.interactions .faqs .faq.triggred .head {
+.interactions .faqs .faq:hover .head, .interactions .faqs .faq:hover .show-faq, .interactions .faqs .faq:focus .head, .interactions .faqs .faq:focus .show-faq {
+  color: #eb2f06;
+}
+
+.interactions .faqs .faq.triggred .head, .interactions .faqs .faq.triggred .show-faq {
   color: #eb2f06;
 }
 
@@ -11672,15 +11685,11 @@ header nav .menu-mobile .list-unstyled li a::after {
   text-transform: capitalize;
   font-weight: bolder;
   color: #000;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   display: block;
   width: 96%;
   margin-bottom: 10px;
-}
-
-.interactions .faqs .faq .head:hover, .interactions .faqs .faq .head:focus {
-  color: #eb2f06;
 }
 
 .interactions .faqs .faq .show-faq {
@@ -11689,13 +11698,15 @@ header nav .menu-mobile .list-unstyled li a::after {
   right: 0px;
   font-size: 20px;
   color: #999;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .interactions .faqs .faq .answer {
   padding-left: 10px;
   max-height: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   overflow: hidden;
 }
 
@@ -11736,7 +11747,12 @@ footer .footer-contact .communication {
   padding-bottom: 8px;
 }
 
-footer .footer-contact .communication:hover i {
+footer .footer-contact .communication a {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+footer .footer-contact .communication:hover i, footer .footer-contact .communication:hover a {
   color: #eb2f06;
 }
 
@@ -11745,8 +11761,8 @@ footer .footer-contact .communication i {
   vertical-align: middle;
   margin-top: 3px;
   margin-right: 10px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 footer .footer-links li {
@@ -11766,14 +11782,14 @@ footer .footer-links i {
   color: #999;
   margin-right: 5px;
   vertical-align: middle;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 footer .footer-links a {
   font-size: 14px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 footer .gallery .footer-img {
@@ -11819,9 +11835,20 @@ footer .newsletter .subscribe a {
       -ms-flex-align: center;
           align-items: center;
   width: 20%;
-  background: #fff;
+  background-color: #fff;
   color: #999;
   text-align: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+footer .newsletter .subscribe a:hover {
+  background-color: #eb2f06;
+}
+
+footer .newsletter .subscribe a:hover i {
+  border-color: #fff;
+  color: #fff;
 }
 
 footer .newsletter .subscribe a i {
@@ -11838,6 +11865,8 @@ footer .newsletter .subscribe a i {
   height: 25px;
   border: 1px solid #999;
   border-radius: 50%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 footer .newsletter .footer-social {
@@ -11863,8 +11892,8 @@ footer .newsletter .footer-social ul li a {
   font-size: 13px;
   vertical-align: top;
   color: #999;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 footer .newsletter .footer-social ul li a:hover {

@@ -19,8 +19,11 @@ footer{
   .footer-contact{
     .communication{
       padding-bottom: 8px ;
+      a{
+    transition:0.5s ease-in-out
+      }
       &:hover{
-        i{
+        i , a{
             color:$mainColor
         }
       }
@@ -29,7 +32,7 @@ footer{
         vertical-align: middle;
         margin-top:3px;
         margin-right: 10px;
-        transition:0.5s
+        transition:0.5s ease-in-out
       }
     }
   }
@@ -51,11 +54,11 @@ footer{
       color: #999;
       margin-right: 5px;
       vertical-align: middle;
-      transition: 0.5s;
+      transition: 0.5s ease-in-out;
     }
     a{
       font-size: 14px;
-      transition:0.5s;
+      transition:0.5s ease-in-out;
     }
   }
   .gallery{
@@ -90,9 +93,17 @@ footer{
         justify-content: center;
         align-items: center;
         width:20%;
-        background: #fff;
+        background-color: #fff;
         color: #999;
         text-align: center;
+        transition: 0.5s ease-in-out;
+        &:hover{
+          background-color: $mainColor;
+          i{
+            border-color: #fff;
+            color: #fff
+          }
+        }
         i{
           display: inline-flex;
           justify-content: center;
@@ -101,6 +112,7 @@ footer{
           height: 25px;
           border: 1px solid #999;
           border-radius: 50%;
+          transition: 0.5s ease-in-out;
         }
       }
     }
@@ -117,7 +129,7 @@ footer{
             font-size: 13px;
             vertical-align: top;
             color: #999;
-            transition: 0.5s;
+            transition: 0.5s ease-in-out;
             &:hover{
               color: $mainColor;
             }
